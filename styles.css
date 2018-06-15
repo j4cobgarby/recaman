@@ -1,0 +1,17 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+canvas#canv {
+    box-sizing: border-box;
+    border: 1px solid grey;
+
+    width: 600px;
+    height: 600px;
+}

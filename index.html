@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Recaman sequence visualiser</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="recaman.js"></script>
+    </head>
+    <body onload="run();">
+        <canvas id="canv" width="1200" height="600"></canvas>
+        <hr>
+        <button id="running_toggle" onclick="running = !running;">play/pause</button><br>
+        <input type="number" id="fb4u" onchange="set_frameb4update(fb4u.value);">
+        This changes how many frames pass before adding the next number in the sequence. Higher value = slower
+        <h1>What is this??</h1>
+        <p>
+            A cool visualisation of the recaman sequence. It draws arcs alternatingly above and below the number
+            line from the previous number in the sequence to the next. Inspired by Numberphile - see below.
+        </p>
+        <h1>What's the recaman sequence, then?</h1>
+        <p>
+            The sequence starts at 0. To get the second number, I try to subract 1. To get the third, I try to
+            subtract 2, and for the fourth, I try to subtract 3, etc. The catch is that if by doing that, I land
+            on a number which I've already seen, or one which is negative, I increment by that number instead.
+        </p>
+        <h1>That was a horrible explanation!! Where can I find a better one?</h1>
+        <a href="https://www.youtube.com/watch?v=FGC5TdIiT9U&t=519s">On numberphile.</a>
+        <h1>Where can I find the source code?</h1>
+        <p>
+            <a href="https://github.com/j4cobgarby/recaman">Here!</a>... But the code was written very badly, since I learnt javascript
+            at the same time as writing this! Also no comments. Any contributions welcome :)
+        </p>
+    </body>
+</html>
